@@ -7,6 +7,12 @@
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .container.grid {
+    width: 100%;
+  }
+}
+
 .container.list {
   width: 100%;
 }

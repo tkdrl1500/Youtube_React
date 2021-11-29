@@ -6,6 +6,13 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .detail {
   flex: 1 1 70%;
 }

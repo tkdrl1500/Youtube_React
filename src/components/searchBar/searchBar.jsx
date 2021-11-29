@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './searchBar.module.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = memo(({ onSearch }) => {
   const inputRef = useRef();
   const handleValue = () => {
     const value = inputRef.current.value;
@@ -38,6 +38,6 @@ const SearchBar = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default SearchBar;

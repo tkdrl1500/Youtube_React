@@ -1,15 +1,6 @@
-import axios from 'axios';
-
 class Youtube {
-  constructor(key) {
-    this.youtube = axios.create({
-      baseURL: 'https://youtube.googleapis.com/youtube/v3',
-      params: {
-        key,
-        part: 'snippet',
-        maxResults: 25,
-      },
-    });
+  constructor(httpClient) {
+    this.youtube = httpClient;
   }
   async search(query) {
     const response = await this.youtube.get('videos', {
